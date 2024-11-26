@@ -1,0 +1,276 @@
+/* Grundlegendes Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #333;
+    overflow-x: hidden; /* Kein horizontales Scrollen */
+}
+
+/* One Pager Styling */
+.section {
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Kleine Sektionen */
+.small-section {
+    min-height: 50vh; /* Reduzierte Höhe für kleine Abschnitte */
+}
+
+/* Abwechselnde Farben */
+.section-light {
+    background: linear-gradient(120deg, #f7d9aa, #f08300);
+    color: #333;
+    padding: 20px;
+}
+
+.section-dark {
+    background: #000;
+    color: #f08300;
+    min-height: 100vh; /* Höhe bleibt wie vorher */
+    padding: 20px;
+}
+
+/* Japanische Überschrift */
+.big-japanese-text {
+    font-family: 'Anton', sans-serif; /* Originalschriftart */
+    font-size: 8vw; /* Dynamische Größe, etwas kleiner als vorher */
+    text-align: center;
+    margin: 0;
+    letter-spacing: 0.2em;
+    line-height: 1.2;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5); /* Starker Schatteneffekt */
+}
+
+/* Abschnittsüberschrift */
+.section-subheading {
+    font-family: 'Anton', sans-serif;
+    font-size: 3rem; /* Kleinere Größe als die Header-Überschrift */
+    margin-bottom: 30px; /* Abstand nach unten zu den Bildern */
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5); /* Dezenter Schatten */
+    color: #f08300; /* Haikyuu-Orange */
+}
+
+/* Highlight-Text */
+.highlight-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem; /* Etwas größerer Text */
+    text-align: center;
+    color: #f08300;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 3px solid #f08300;
+}
+
+/* Galerie */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: 3px solid #f08300;
+}
+
+.gallery_dream img {
+    width: 1000px;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: 3px solid #f08300;
+}
+
+/* Konfetti */
+.volleyball-confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.volleyball-confetti div {
+    position: absolute;
+    font-size: 24px;
+    animation: fall 4s linear infinite;
+}
+
+/* Button */
+.message img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+}
+
+/* Animation für die Startseite */
+#intro-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* Schwarzer Hintergrund */
+    color: #f08300; /* Haikyuu-Orange */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 4rem;
+    z-index: 100;
+    animation: fadeOut 4s ease-in-out forwards;
+}
+
+#intro-animation h1 {
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    90% { opacity: 0; }
+    100% { display: none; }
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fall {
+    0% { transform: translateY(-100px); opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
+/* Abstand zwischen Textbox und Diashow */
+.slideshow-wrapper {
+    margin-top: 40px;
+}
+
+/* Überschrift über der Diashow */
+.slideshow-heading {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.8rem;
+    color: #000; /* Schwarz als Textfarbe */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 3px solid #f08300;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 600px;
+}
+
+/* Slides */
+.slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+/* Schwarzbild mit Text */
+.black-screen {
+    background-color: black;
+    color: #f08300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Bilder */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Play Button */
+.play-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background: #f08300;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.play-button:hover {
+    background: #d47400;
+}
+
+/* Vorschau (Schwarzbild) */
+#preview {
+    background-color: black;
+    color: #f08300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    height: 600px;
+}
+
+/* Nachricht-Sektion */
+.message-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border: 3px solid #f08300;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.message-heading {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.8rem;
+    color: #f08300;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.message-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+}
+
